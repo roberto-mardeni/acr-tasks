@@ -17,6 +17,6 @@ steps:
     - {{.Run.Registry}}/hello-world:{{.Run.ID}}
   # helm deploy the updated hello-world image
   - cmd: >
-      cmd.azurecr.io/helm:v2.11.0-rc.2 update helloworld ./release/helm/ 
+      romarden.azurecr.io/helm:v2.11.0-rc.2 update helloworld ./release/helm/ 
       --reuse-values 
       --set helloworld.image={{.Run.Registry}}/hello-world:{{.Run.ID}}
